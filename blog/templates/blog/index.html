@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="ui text container">
+        <br>
+        {% for c in object_list %}
+            {% for p in c.post_set.all %}
+                {% include "component/post.html" %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+<div class="ui inverted vertical masthead center aligned segment">
+    
+    <div class="ui container">
+        <div class="ui large secondary inverted pointing menu">
+            <a class="toc item">
+                <i class="sidebar icon"></i>
+            </a>
+            <a class="active item">Home</a>
+            <a class="item">Blog</a>
+            <div class="right item">
+                <img class="ui tiny image" src="https://clubs.ntu.edu.sg/csec/wp-content/uploads/2018/02/NTUSULogo_Master.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="ui text container">
+        <h1 class="ui inverted header">
+            Hi, {{ request.user }}
+        </h1>
+        <h2>Do whatever you want when you want to.</h2>
+        <div class="ui category search">
+            <div class="ui icon input">
+                <input class="prompt inverted" type="text" placeholder="Search posts...">
+                <i class="search icon"></i>
+            </div>
+            <div class="results"></div>
+        </div>
+    </div>
+
+</div>

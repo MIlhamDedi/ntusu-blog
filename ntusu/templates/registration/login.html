@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+</head>
+
+<body>
+    <h1>LOGIN HERE</h1>
+    <h2>{{ form.errors }}</h2>
+    <div class="ui inverted segment">
+        <form method="POST" action="{% url 'login' %}" class="ui large inverted form">
+            {% csrf_token %}
+            <div class="two fields">
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        {{ form.username }}
+                        <!-- <input type="text" name="email" placeholder="E-mail address" required> -->
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        {{ form.password }}
+                        <!-- <input type="password" name="password" placeholder="Password" required> -->
+                    </div>
+                </div>
+
+                <div class="inline field">
+                    <button class="ui primary button" type="submit"> login</button>
+                    <button class="ui button"> sign up</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

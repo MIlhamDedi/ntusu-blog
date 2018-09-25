@@ -1,0 +1,23 @@
+<div class="ui vertical fluid tabular menu">
+    <a 
+        href="/blog" 
+        {% if request.GET.category %}
+        class="item">
+        {% else %}
+        class="active item">
+        {% endif %}
+        All
+    </a>
+    {% for c in clist %}
+        <a 
+            href="/blog?category={{ c.category_name }}" 
+            {% if request.GET.category == c.category_name %}
+            class="active item">
+            {% else %}
+            class="item">
+            {% endif %}
+
+            {{ c.category_name }}
+        </a>
+    {% endfor %}
+</div>
